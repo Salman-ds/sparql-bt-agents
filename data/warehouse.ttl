@@ -1,0 +1,37 @@
+# data/warehouse.ttl
+@prefix ex:   <http://example.org/warehouse#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# ---------- Ontology: the dictionary of allowed words ----------
+ex:Robot   a rdfs:Class .
+ex:Package a rdfs:Class .
+ex:Place   a rdfs:Class .
+ex:Shelf   a rdfs:Class ; rdfs:subClassOf ex:Place .
+ex:Dock    a rdfs:Class ; rdfs:subClassOf ex:Place .
+
+ex:x         a rdf:Property ; rdfs:comment "grid column (0-5)" .
+ex:y         a rdf:Property ; rdfs:comment "grid row (0-5)" .
+ex:isAt      a rdf:Property ; rdfs:comment "a robot or package is at a place" .
+ex:heldBy    a rdf:Property ; rdfs:comment "a package is carried by a robot" .
+ex:claimedBy a rdf:Property ; rdfs:comment "a robot has reserved a package" .
+ex:status    a rdf:Property ; rdfs:comment "a dock is ex:free or ex:busy" .
+ex:free      a rdfs:Resource .
+ex:busy      a rdfs:Resource .
+
+# ---------- Places on the 6x6 grid ----------
+ex:shelf1 a ex:Shelf ; ex:x 0 ; ex:y 5 .
+ex:shelf2 a ex:Shelf ; ex:x 2 ; ex:y 5 .
+ex:shelf3 a ex:Shelf ; ex:x 4 ; ex:y 5 .
+ex:dock1  a ex:Dock  ; ex:x 0 ; ex:y 0 ; ex:status ex:free .
+ex:dock2  a ex:Dock  ; ex:x 2 ; ex:y 0 ; ex:status ex:free .
+ex:dock3  a ex:Dock  ; ex:x 4 ; ex:y 0 ; ex:status ex:free .
+
+# ---------- Robots ----------
+ex:robotA a ex:Robot ; ex:x 0 ; ex:y 2 .
+ex:robotB a ex:Robot ; ex:x 5 ; ex:y 2 .
+
+# ---------- Packages ----------
+ex:redPackage   a ex:Package ; ex:isAt ex:shelf1 .
+ex:bluePackage  a ex:Package ; ex:isAt ex:shelf2 .
+ex:greenPackage a ex:Package ; ex:isAt ex:shelf3 .

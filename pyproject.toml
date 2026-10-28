@@ -1,0 +1,15 @@
+# pyproject.toml
+[project]
+name = "sparql-bt-agents"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["rdflib>=7.0", "requests", "matplotlib", "pillow"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
