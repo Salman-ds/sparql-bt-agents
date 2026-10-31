@@ -3190,5 +3190,3137 @@
         }
       }
     }
+  ],
+  "grounded": [
+    {
+      "id": "L1-01",
+      "level": 1,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L1-02",
+      "level": 1,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf2"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "condition",
+                "ask": "ASK { ex:dock2 ex:status ex:free }"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock2"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:bluePackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf2\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:dock2 ex:status ex:free }\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:bluePackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L1-03",
+      "level": 1,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock3"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:greenPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L1-04",
+      "level": 1,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock3"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L1-05",
+      "level": 1,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "condition",
+                "ask": "ASK { ex:greenPackage ex:isAt ex:shelf3 }"
+              },
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock2"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:greenPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:greenPackage ex:isAt ex:shelf3 }\"},\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L1-06",
+      "level": 1,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf2"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "condition",
+                "ask": "ASK { ex:dock1 ex:status ex:free }"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:bluePackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf2\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:dock1 ex:status ex:free }\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:bluePackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L1-07",
+      "level": 1,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock2"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L2-01",
+      "level": 2,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:dock2 ex:status ex:free }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock2"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:redPackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock1"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:redPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:dock2 ex:status ex:free }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L2-02",
+      "level": 2,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:dock2 ex:status ex:free }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock2"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:redPackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock1"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:redPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:dock2 ex:status ex:free }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L2-03",
+      "level": 2,
+      "valid": true,
+      "success": false,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "condition",
+                "ask": "ASK { ex:shelf3 ex:isAt ex:robotA }"
+              },
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:dock2 ex:status ex:free }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock2"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:greenPackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock3"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:greenPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:shelf3 ex:isAt ex:robotA }\"},\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:dock2 ex:status ex:free }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L2-04",
+      "level": 2,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf2"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:dock1 ex:status ex:free }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock1"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:bluePackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock3"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:bluePackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf2\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:dock1 ex:status ex:free }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:bluePackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:bluePackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L2-05",
+      "level": 2,
+      "valid": true,
+      "success": false,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "condition",
+                "ask": "ASK { ex:redPackage ex:isAt ex:shelf1 }"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:redPackage ex:isAt ex:shelf2 }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:shelf2"
+                      },
+                      {
+                        "type": "action",
+                        "name": "pick",
+                        "arg": "ex:redPackage"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock1"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:redPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:redPackage ex:isAt ex:shelf1 }\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:redPackage ex:isAt ex:shelf2 }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf2\"},\n      {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L2-06",
+      "level": 2,
+      "valid": true,
+      "success": false,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "condition",
+                "ask": "ASK { ex:dock1 ex:status ex:free }"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:dock2 ex:status ex:free }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock2"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:greenPackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:dock3 ex:status ex:free }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock3"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:greenPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:dock1 ex:status ex:free }\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:dock2 ex:status ex:free }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:dock3 ex:status ex:free }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L2-07",
+      "level": 2,
+      "valid": true,
+      "success": false,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "condition",
+                "ask": "ASK { ex:redPackage ex:claimedBy ex:robotA }"
+              },
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:redPackage ex:claimedBy ex:robotA }\"},\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L3-01",
+      "level": 3,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}",
+              "errors": []
+            }
+          ]
+        },
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock3"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:greenPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L3-02",
+      "level": 3,
+      "valid": true,
+      "success": false,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf2"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "condition",
+                "ask": "ASK { ex:dock2 ex:status ex:free }"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock2"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:bluePackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf2\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:dock2 ex:status ex:free }\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:bluePackage\"}]}",
+              "errors": []
+            }
+          ]
+        },
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "condition",
+                "ask": "ASK { ex:bluePackage ex:isAt ex:shelf2 }"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock2"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:greenPackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock3"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:greenPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:bluePackage ex:isAt ex:shelf2 }\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L3-03",
+      "level": 3,
+      "valid": true,
+      "success": false,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}",
+              "errors": []
+            }
+          ]
+        },
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "condition",
+                "ask": "ASK { ex:redPackage ex:isAt ex:shelf1 }"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "action",
+                    "name": "move_to",
+                    "arg": "ex:shelf3"
+                  },
+                  {
+                    "type": "action",
+                    "name": "pick",
+                    "arg": "ex:greenPackage"
+                  },
+                  {
+                    "type": "action",
+                    "name": "move_to",
+                    "arg": "ex:shelf3"
+                  },
+                  {
+                    "type": "action",
+                    "name": "drop",
+                    "arg": "ex:greenPackage"
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:redPackage ex:isAt ex:shelf1 }\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n    {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n    {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n    {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L3-04",
+      "level": 3,
+      "valid": true,
+      "success": false,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf2"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "condition",
+                "ask": "ASK { ex:dock1 ex:status ex:free }"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:bluePackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf2\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:dock1 ex:status ex:free }\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:bluePackage\"}]}",
+              "errors": []
+            }
+          ]
+        },
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf2"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:bluePackage ex:heldBy ex:robotA }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:shelf3"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:bluePackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:greenPackage ex:isAt ex:shelf3 }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:shelf3"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:greenPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf2\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:bluePackage ex:heldBy ex:robotA }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:bluePackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:greenPackage ex:isAt ex:shelf3 }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L3-05",
+      "level": 3,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:dock1 ex:status ex:free }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock1"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:redPackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock2"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:redPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:dock1 ex:status ex:free }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        },
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock3"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:greenPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L3-06",
+      "level": 3,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:greenPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}",
+              "errors": []
+            }
+          ]
+        },
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock2"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "grounded_repair": [
+    {
+      "id": "L1-01",
+      "level": 1,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L1-02",
+      "level": 1,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf2"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "condition",
+                "ask": "ASK { ex:dock2 ex:status ex:free }"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock2"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:bluePackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf2\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:dock2 ex:status ex:free }\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:bluePackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L1-03",
+      "level": 1,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock3"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:greenPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L1-04",
+      "level": 1,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock3"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L1-05",
+      "level": 1,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "condition",
+                "ask": "ASK { ex:greenPackage ex:isAt ex:shelf3 }"
+              },
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock2"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:greenPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:greenPackage ex:isAt ex:shelf3 }\"},\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L1-06",
+      "level": 1,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf2"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "condition",
+                "ask": "ASK { ex:dock1 ex:status ex:free }"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:bluePackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf2\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:dock1 ex:status ex:free }\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:bluePackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L1-07",
+      "level": 1,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock2"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L2-01",
+      "level": 2,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:dock2 ex:status ex:free }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock2"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:redPackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock1"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:redPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:dock2 ex:status ex:free }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L2-02",
+      "level": 2,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:dock2 ex:status ex:free }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock2"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:redPackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock1"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:redPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:dock2 ex:status ex:free }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L2-03",
+      "level": 2,
+      "valid": true,
+      "success": false,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "condition",
+                "ask": "ASK { ex:shelf3 ex:isAt ex:robotA }"
+              },
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:dock2 ex:status ex:free }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock2"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:greenPackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock3"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:greenPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:shelf3 ex:isAt ex:robotA }\"},\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:dock2 ex:status ex:free }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L2-04",
+      "level": 2,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf2"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:dock1 ex:status ex:free }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock1"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:bluePackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock3"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:bluePackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf2\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:dock1 ex:status ex:free }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:bluePackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:bluePackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L2-05",
+      "level": 2,
+      "valid": true,
+      "success": false,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "condition",
+                "ask": "ASK { ex:redPackage ex:isAt ex:shelf1 }"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:redPackage ex:isAt ex:shelf2 }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:shelf2"
+                      },
+                      {
+                        "type": "action",
+                        "name": "pick",
+                        "arg": "ex:redPackage"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock1"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:redPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:redPackage ex:isAt ex:shelf1 }\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:redPackage ex:isAt ex:shelf2 }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf2\"},\n      {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L2-06",
+      "level": 2,
+      "valid": true,
+      "success": false,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "condition",
+                "ask": "ASK { ex:dock1 ex:status ex:free }"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:dock2 ex:status ex:free }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock2"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:greenPackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:dock3 ex:status ex:free }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock3"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:greenPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:dock1 ex:status ex:free }\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:dock2 ex:status ex:free }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:dock3 ex:status ex:free }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L2-07",
+      "level": 2,
+      "valid": true,
+      "success": false,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "condition",
+                "ask": "ASK { ex:redPackage ex:claimedBy ex:robotA }"
+              },
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:redPackage ex:claimedBy ex:robotA }\"},\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L3-01",
+      "level": 3,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}",
+              "errors": []
+            }
+          ]
+        },
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock3"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:greenPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L3-02",
+      "level": 3,
+      "valid": true,
+      "success": false,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf2"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "condition",
+                "ask": "ASK { ex:dock2 ex:status ex:free }"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock2"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:bluePackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf2\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:dock2 ex:status ex:free }\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:bluePackage\"}]}",
+              "errors": []
+            }
+          ]
+        },
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "condition",
+                "ask": "ASK { ex:bluePackage ex:isAt ex:shelf2 }"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock2"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:greenPackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock3"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:greenPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:bluePackage ex:isAt ex:shelf2 }\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L3-03",
+      "level": 3,
+      "valid": true,
+      "success": false,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}",
+              "errors": []
+            }
+          ]
+        },
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "condition",
+                "ask": "ASK { ex:redPackage ex:isAt ex:shelf1 }"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "action",
+                    "name": "move_to",
+                    "arg": "ex:shelf3"
+                  },
+                  {
+                    "type": "action",
+                    "name": "pick",
+                    "arg": "ex:greenPackage"
+                  },
+                  {
+                    "type": "action",
+                    "name": "move_to",
+                    "arg": "ex:shelf3"
+                  },
+                  {
+                    "type": "action",
+                    "name": "drop",
+                    "arg": "ex:greenPackage"
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:redPackage ex:isAt ex:shelf1 }\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n    {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n    {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n    {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L3-04",
+      "level": 3,
+      "valid": true,
+      "success": false,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf2"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "condition",
+                "ask": "ASK { ex:dock1 ex:status ex:free }"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:bluePackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf2\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"condition\", \"ask\": \"ASK { ex:dock1 ex:status ex:free }\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:bluePackage\"}]}",
+              "errors": []
+            }
+          ]
+        },
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf2"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:bluePackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:bluePackage ex:heldBy ex:robotA }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:shelf3"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:bluePackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:greenPackage ex:isAt ex:shelf3 }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:shelf3"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:greenPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf2\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:bluePackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:bluePackage ex:heldBy ex:robotA }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:bluePackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:greenPackage ex:isAt ex:shelf3 }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L3-05",
+      "level": 3,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "fallback",
+                "children": [
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "condition",
+                        "ask": "ASK { ex:dock1 ex:status ex:free }"
+                      },
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock1"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:redPackage"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sequence",
+                    "children": [
+                      {
+                        "type": "action",
+                        "name": "move_to",
+                        "arg": "ex:dock2"
+                      },
+                      {
+                        "type": "action",
+                        "name": "drop",
+                        "arg": "ex:redPackage"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"fallback\", \"children\": [\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"condition\", \"ask\": \"ASK { ex:dock1 ex:status ex:free }\"},\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]},\n    {\"type\": \"sequence\", \"children\": [\n      {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n      {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}]}]}",
+              "errors": []
+            }
+          ]
+        },
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock3"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:greenPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock3\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L3-06",
+      "level": 3,
+      "valid": true,
+      "success": true,
+      "repairs": 0,
+      "errors": [],
+      "plans": {
+        "robotA": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf3"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:greenPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock1"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:greenPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf3\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:greenPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock1\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:greenPackage\"}]}",
+              "errors": []
+            }
+          ]
+        },
+        "robotB": {
+          "tree": {
+            "type": "sequence",
+            "children": [
+              {
+                "type": "action",
+                "name": "claim",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:shelf1"
+              },
+              {
+                "type": "action",
+                "name": "pick",
+                "arg": "ex:redPackage"
+              },
+              {
+                "type": "action",
+                "name": "move_to",
+                "arg": "ex:dock2"
+              },
+              {
+                "type": "action",
+                "name": "drop",
+                "arg": "ex:redPackage"
+              }
+            ]
+          },
+          "errors": [],
+          "repairs": 0,
+          "history": [
+            {
+              "output": "{\"type\": \"sequence\", \"children\": [\n  {\"type\": \"action\", \"name\": \"claim\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:shelf1\"},\n  {\"type\": \"action\", \"name\": \"pick\", \"arg\": \"ex:redPackage\"},\n  {\"type\": \"action\", \"name\": \"move_to\", \"arg\": \"ex:dock2\"},\n  {\"type\": \"action\", \"name\": \"drop\", \"arg\": \"ex:redPackage\"}]}",
+              "errors": []
+            }
+          ]
+        }
+      }
+    }
   ]
 }

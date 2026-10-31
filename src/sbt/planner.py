@@ -5,6 +5,7 @@ import json
 import requests
 from rdflib import Graph
 
+from .kb import state_facts
 from .validator import validate
 
 OLLAMA_URL = "http://localhost:11434/api/chat"
@@ -63,10 +64,15 @@ def ask_llm(messages: list[dict], model: str) -> str:
     return resp.json()["message"]["content"]
 
 
-def plan(instruction: str, g: Graph, model: str, max_repairs: int = 0) -> dict:
-    """Generate a tree. With max_repairs > 0, feed validator errors back to the LLM."""
+def plan(instruction: str, g: Graph, model: str, max_repairs: int = 0,
+         grounded: bool = False) -> dict:
+    """Generate a tree. With max_repairs > 0, feed validator errors back to the LLM.
+    With grounded=True, the prompt also lists the current world state from the graph."""
+    prompt = f"Instruction: {instruction}"
+    if grounded:
+        prompt = "Current world state:\n" + "\n".join(state_facts(g)) + "\n\n" + prompt
     messages = [{"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": f"Instruction: {instruction}"}]
+                {"role": "user", "content": prompt}]
     history = []
     for attempt in range(max_repairs + 1):
         text = ask_llm(messages, model)

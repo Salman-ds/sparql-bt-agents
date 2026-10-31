@@ -46,6 +46,7 @@ def leaf_failures(task: dict, trees: dict) -> tuple[dict, list[str]]:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", default="qwen2.5:3b")
+    parser.add_argument("--variant", default="direct", help="which variant's failures to break down")
     args = parser.parse_args()
     tag = args.model.replace(":", "_")
     results = json.loads((ROOT / "results" / f"results_{tag}.json").read_text())
@@ -55,6 +56,8 @@ def main():
         print(f"\n=== {variant} ===")
         for level in (1, 2, 3, "all"):
             sub = [r for r in rows if level == "all" or r["level"] == level]
+            if not sub:
+                continue
             print(f"level {level}: valid {sum(r['valid'] for r in sub)}/{len(sub)}  "
                   f"success {sum(r['success'] for r in sub)}/{len(sub)}  "
                   f"avg repairs {sum(r['repairs'] for r in sub) / len(sub):.2f}")
@@ -65,12 +68,13 @@ def main():
                     if p["history"][0]["errors"] and not p["errors"])
         print("instructions fixed by repair:", fixed)
 
-    d, r = results["direct"], results["repair"]
-    same = all(a["plans"][k]["tree"] == b["plans"][k]["tree"] for a, b in zip(d, r) for k in a["plans"])
-    print("\ndirect and repair produced identical trees:", same)
+    if "direct" in results and "repair" in results:
+        d, r = results["direct"], results["repair"]
+        same = all(a["plans"][k]["tree"] == b["plans"][k]["tree"] for a, b in zip(d, r) for k in a["plans"])
+        print("\ndirect and repair produced identical trees:", same)
 
-    print("\n=== failed tasks (direct) ===")
-    for row in d:
+    print(f"\n=== failed tasks ({args.variant}) ===")
+    for row in results[args.variant]:
         if row["success"]:
             continue
         trees = {robot: p["tree"] for robot, p in row["plans"].items()}

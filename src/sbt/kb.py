@@ -42,3 +42,13 @@ def known_terms(g: Graph) -> set[str]:
 def is_a(g: Graph, name: str, cls: str) -> bool:
     """Is ex:name an instance of ex:cls (including subclasses)?"""
     return ask(g, f"ASK {{ ex:{name} rdf:type/rdfs:subClassOf* ex:{cls} }}")
+
+def state_facts(g: Graph) -> list[str]:
+    """The current world state as short 'ex:subject ex:predicate ex:object' lines."""
+    rows = g.query(PREFIXES + """
+        SELECT ?s ?p ?o WHERE {
+            VALUES ?p { ex:isAt ex:heldBy ex:claimedBy ex:status }
+            ?s ?p ?o .
+        } ORDER BY ?s ?p""")
+    short = lambda term: "ex:" + str(term)[len(str(EX)):]
+    return [f"{short(s)} {short(p)} {short(o)}" for s, p, o in rows]

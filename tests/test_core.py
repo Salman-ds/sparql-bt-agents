@@ -1,6 +1,6 @@
 # tests/test_core.py
 from sbt.bt import build, run
-from sbt.kb import ask, load_kb, update
+from sbt.kb import ask, load_kb, state_facts, update
 from sbt.world import FAILURE, SUCCESS, claim, pick
 
 
@@ -62,3 +62,11 @@ def test_two_robots_conflict_resolved_by_claim():
         deliver("greenPackage", "shelf3", "dock3")]}
     run(g, {"robotA": build(deliver("redPackage", "shelf1", "dock1")), "robotB": build(b_tree)})
     assert ask(g, "ASK { ex:redPackage ex:isAt ex:dock1 . ex:greenPackage ex:isAt ex:dock3 }")
+
+
+def test_state_facts_reflect_the_current_graph():
+    g = load_kb()
+    assert "ex:greenPackage ex:isAt ex:shelf3" in state_facts(g)
+    update(g, "DELETE DATA { ex:dock2 ex:status ex:free } ; INSERT DATA { ex:dock2 ex:status ex:busy }")
+    facts = state_facts(g)
+    assert "ex:dock2 ex:status ex:busy" in facts and "ex:dock2 ex:status ex:free" not in facts
