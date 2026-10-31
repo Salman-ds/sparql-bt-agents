@@ -252,7 +252,7 @@ results/                  summary tables, per-task JSON, failure analysis, demo 
 
 A. Hechehouche, A. Antakli, M. Klusch. *LLM-Assisted Modeling of Semantic Web-Enabled Multi-Agent Systems with AJAN.* arXiv:2510.06911, 2025.
 
-*Independent student project, inspired by the AJAN framework. It is not affiliated with DFKI and does not use AJAN code.*
+*Independent student project, inspired by the AJAN framework.*
 
 ## Author
 
